@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ClaimActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <include layout="@layout/header"/>
+
+        <ImageView
+            android:id="@+id/imageView_header"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:src="@drawable/logonew"
+            tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/edit_report_name"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/design_edit2"
+                android:minHeight="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:hint="Nom et Prénom"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edit_report_num"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/design_edit2"
+                android:minHeight="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:hint="Numéro de téléphone"
+                android:inputType="phone"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                android:background="@color/Black"
+                android:gravity="center"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Type de Réclamation : "
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/design_edit2"
+                android:ems="10"
+                android:padding="1dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:minHeight="20dp"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/report_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:minWidth="200dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                android:background="@color/Black"
+                android:gravity="center"/>
+            <EditText
+                android:id="@+id/edit_report_text"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/design_edit2"
+                android:minHeight="110dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:hint="Votre Réclamation"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"/>
+
+
+            <Button
+                android:id="@+id/btn_report_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Envoyer"
+                android:minWidth="180dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/ic_send"
+                android:background="@drawable/design_btn2"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:alpha="0.9"
+        android:minWidth="260dp"
+        android:padding="25dp"
+        android:background="@drawable/design_edit1">
+        <ImageView
+            android:id="@+id/image_loading_result"
+            android:layout_width="50dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            android:background="@drawable/failed" />
+        <ProgressBar
+            android:id="@+id/mProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/tv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:text="Le processus est en cours, veuillez patienter"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_try_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Réessayer"
+                android:minWidth="180dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:drawableLeft="@drawable/ic_try_again"
+                android:background="@drawable/design_btn4"/>
+
+            <Button
+                android:id="@+id/btn_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fermer"
+                android:minWidth="180dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/ic_close"
+                android:background="@drawable/design_btn3"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
+

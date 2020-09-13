@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Allo Propre</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="report_types_array">
+        <item>Poubelle non ramassée</item>
+        <item>Décharge sauvage</item>
+        <item>Bacs détruits</item>
+        <item>Bacs insuffisants / Manque des bacs.</item>
+        <item>Problème de balayage.</item>
+        <item>Autre</item>
+    </string-array>
+
+
+</resources>

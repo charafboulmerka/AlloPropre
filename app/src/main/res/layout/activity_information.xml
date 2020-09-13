@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InformationActivity">
+
+    <include layout="@layout/header"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/introduction"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="المؤسسة العمومية للنظافة و التطهير لبلدية عين السمارة"
+                    android:textColor="@color/Green2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="2dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EPIC EPAS"
+                    android:textColor="@color/Green2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:padding="2dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="L’EPIC EPAS est le responsable de la collecte et le transport des déchets au niveau du territoire de la commune d’Ain Smara avec le but d'améliorer la situation sanitaire globale de la commune. "
+                    android:textColor="@color/Black"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/design_edit2"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Parmi ces responsabilités : "
+                    android:textColor="@color/Bleu"
+                    android:layout_margin="5dp"
+                    android:padding="2dp"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="•	Organiser la collecte, le transport et l’évacuation des déchets."
+                    android:textColor="@color/Black"
+                    android:padding="2dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="•	Organiser les opérations de nettoyage. "
+                    android:textColor="@color/Black"
+                    android:padding="2dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="•	Le balayage des rues."
+                    android:textColor="@color/Black"
+                    android:padding="2dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="•	Les travaux des espaces verts"
+                    android:textColor="@color/Black"
+                    android:padding="2dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/Black"
+                    android:gravity="center"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_intro_img1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:padding="6dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/design_selected2"
+                        android:onClick="IntroductionImagesClick"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:background="@drawable/intro_img1"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_intro_img2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:padding="6dp"
+                        android:orientation="vertical"
+                        android:onClick="IntroductionImagesClick"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:background="@drawable/intro_img2"/>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_intro_img3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:padding="6dp"
+                        android:onClick="IntroductionImagesClick"
+                        android:layout_gravity="center|center_vertical"
+                        android:gravity="center|center_vertical"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:background="@drawable/intro_img3"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_intro_img4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:padding="6dp"
+                        android:onClick="IntroductionImagesClick"
+                        android:layout_gravity="center|center_vertical"
+                        android:gravity="center|center_vertical"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:background="@drawable/intro_img4"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/Black"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/tv_selected_introImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/intro_img1"/>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Les_horraires"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="Les horraires de la collecte :"
+                    android:gravity="center"
+                    android:textColor="@color/Red"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="•	Les déchets ménagers :"
+                    android:textColor="@color/Green2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="2dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="	Tous les jours du 4H 30 du  matin  jusq’au 8H du matin."
+                    android:textColor="@color/Black"
+                    android:gravity="center"
+                    android:padding="2dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/menagers"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="Les horraires de la collecte :"
+                    android:gravity="center"
+                    android:textColor="@color/Red"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="•	Les déchets solides  :"
+                    android:textColor="@color/Green2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="2dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lundi  et Mercredi à partir de 8H du matin."
+                    android:gravity="center"
+                    android:textColor="@color/Black"
+                    android:padding="2dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/solides"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_compagne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/logonew"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L’EPIC organise chaque Samedi une opération de nettoyage d’un quartier, avec l'apuis du volentariat des habitants de Ain Smara."
+                android:textSize="25dp"
+                android:inputType="textMultiLine"
+                android:layout_margin="15dp"
+                android:padding="7dp"
+                android:gravity="left"
+                android:background="@drawable/design_edit2"
+                android:autoSizeTextType="uniform"
+
+                android:textColor="@color/Black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Red"
+                android:layout_margin="15dp"
+                android:padding="7dp"
+                android:textSize="17dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:autoSizeMaxTextSize="100sp"
+                android:autoSizeStepGranularity="2sp"
+                android:text="Vous recevrez une notification pour vous informer sur le quartier concerné par la campagne du nettoyage et du volontariat la veille de Samedi"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-- Pour plus d'informations --"
+                android:gravity="center"
+                android:textColor="@color/Black"
+                android:layout_margin="18dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/btn_facebook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_001_facebook" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/btn_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_002_phone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/btn_gmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_gmail" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/btn_gps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_003_google_maps" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+</LinearLayout>

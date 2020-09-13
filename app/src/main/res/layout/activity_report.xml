@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportActivity">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/header"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edit_address"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/design_edit2"
+                android:minHeight="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:hint="Address"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/btn_get_auto_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_location"
+                android:padding="8dp"
+                android:background="@drawable/design_btn1"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_coords"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Localisation "
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/edit_note"
+            android:layout_width="match_parent"
+            android:background="@drawable/design_edit2"
+            android:minHeight="70dp"
+            android:layout_marginTop="15dp"
+            android:hint="Remarque"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="Type de déchet : "
+            android:textColor="@color/Green2"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/Black"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/layout_dechet_encom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="6dp"
+                android:orientation="vertical"
+                android:onClick="DechetTypeClick"
+                android:layout_weight="1">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:background="@drawable/type1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Encombrants"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/Black"
+                    android:background="@color/Grey"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_dechet_verts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="6dp"
+                android:orientation="vertical"
+                android:onClick="DechetTypeClick"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="130dp"
+                    android:background="@drawable/type2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Verts"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/Black"
+                    android:background="@color/Grey"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_dechet_autre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="6dp"
+                android:onClick="DechetTypeClick"
+                android:layout_gravity="center|center_vertical"
+                android:gravity="center|center_vertical"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="#EFEEEE"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_warning"
+                        android:minHeight="130dp"
+                        />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Autre"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/Black"
+                    android:background="@color/Grey"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/Black"
+            android:gravity="center"/>
+<!--
+        <co.ceryle.radiorealbutton.RadioRealButtonGroup
+            android:id="@+id/mradio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:layout_marginLeft="5dp"
+            app:rrbg_animateDrawables_enter="overshoot"
+            app:rrbg_animateTexts_enter="overshoot"
+            app:rrbg_dividerColor="@color/OtherGrey"
+            app:rrbg_dividerSize="0.5dp"
+            app:rrbg_radius="10dp"
+            app:rrbg_selectorColor="@color/Black"
+            app:rrbg_selectorSize="2dp">
+
+            <co.ceryle.radiorealbutton.RadioRealButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/type1"
+                app:rrb_drawableHeight="80dp"
+                app:rrb_drawablePadding="8dp"
+                app:rrb_drawableWidth="36dp"
+                app:rrb_ripple="true"
+                app:rrb_text="Solides"
+                app:rrb_drawableGravity="top"
+                app:rrb_rippleColor="@color/Black"
+                app:rrb_textColor="@color/Black"/>
+
+            <co.ceryle.radiorealbutton.RadioRealButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rrb_drawable="@drawable/menager"
+                android:background="@drawable/type2"
+                app:rrb_drawableGravity="top"
+                app:rrb_drawableHeight="80dp"
+                app:rrb_drawablePadding="8dp"
+                app:rrb_drawableWidth="36dp"
+                app:rrb_ripple="true"
+                app:rrb_text="Ménager"
+                app:rrb_rippleColor="@color/Black"
+                app:rrb_textColor="@color/Black"/>
+
+
+
+            <co.ceryle.radiorealbutton.RadioRealButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rrb_drawable="@drawable/other"
+                app:rrb_drawableGravity="top"
+                app:rrb_drawableHeight="80dp"
+                app:rrb_drawablePadding="8dp"
+                app:rrb_drawableWidth="36dp"
+                app:rrb_ripple="true"
+                app:rrb_text="Autres"
+                app:rrb_rippleColor="@color/Black"
+                app:rrb_textColor="@color/Black"/>
+        </co.ceryle.radiorealbutton.RadioRealButtonGroup>
+
+-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:layout_gravity="bottom">
+                <ImageView
+                    android:id="@+id/tv_selectedImg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="visible"
+                    android:layout_gravity="center"/>
+                <Button
+                    android:id="@+id/btn_addImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ajouter une image"
+                    android:minWidth="180dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:padding="15dp"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/ic_camera"
+                    android:background="@drawable/design_btn1"/>
+
+
+
+                <Button
+                    android:id="@+id/btn_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Envoyer"
+                    android:minWidth="180dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:drawableLeft="@drawable/ic_send"
+                    android:background="@drawable/design_btn2"/>
+
+                <Switch
+                    android:id="@+id/switch_sendLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Inclure la localisation"
+                    android:checked="true"
+                    android:visibility="gone"
+                    android:gravity="top"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:alpha="0.9"
+        android:minWidth="260dp"
+        android:padding="25dp"
+        android:background="@drawable/design_edit1">
+        <ImageView
+            android:id="@+id/image_loading_result"
+            android:layout_width="50dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            android:background="@drawable/failed" />
+        <ProgressBar
+            android:id="@+id/mProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/tv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:text="Le processus est en cours, veuillez patienter"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_try_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Réessayer"
+                android:minWidth="180dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:drawableLeft="@drawable/ic_try_again"
+                android:background="@drawable/design_btn4"/>
+
+            <Button
+                android:id="@+id/btn_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fermer"
+                android:minWidth="180dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/ic_close"
+                android:background="@drawable/design_btn3"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>
