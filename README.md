@@ -58,6 +58,12 @@ You may need to improve the UI/UX
 the screenshots are from a proof of concept version.
 Screenshots :
 
+<p float="left">
+  <img src="https://i.postimg.cc/3RS1BTqh/1.jpg" width="45%" />
+  <img src="https://i.postimg.cc/RVndc2Lr/2.jpg" width="45%" />
+  <img src="https://i.postimg.cc/MZLtfzRb/5.jpg" width="45%" />
+  <img src="https://i.postimg.cc/SRnr1P0M/4.jpg" width="45%" />
+</p>
 
 
 ---
@@ -68,15 +74,6 @@ Screenshots :
 - Firebase or custom backend (optional)
 - Google Maps / Location Services
 - Material Design UI
-
----
-
-## 🚀 Future Improvements
-
-- Add notification system for follow-ups
-- Add status tracking per report
-- Export submissions to CSV
-- Admin web dashboard
 
 ---
 
